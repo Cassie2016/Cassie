@@ -24,5 +24,5 @@ Set a timer to delay loading js script files
 
 Put the js script at the bottom of the document so that the js script can be loaded and executed at the end as much as possible. 
 
-![Alt](../assets/imgs/image.png
+![Alt](../assets/imgs/image.png)
 
