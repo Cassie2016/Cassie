@@ -28,7 +28,7 @@ there are two reasons:
 I thought when the fn is invoked in the setTimeout function, cause it was wrapped by an arrow function, so this refered to the outside function context, which was the closure context.
 but the fn was not a method of any object when invoked, so this refered to the global object or undefined.
 
-So we need to use apply or call change this to the the closure context.
+So we need to use apply or call change the this pointer to the the closure context.
 
 
 function debounce(fn, wait) {
