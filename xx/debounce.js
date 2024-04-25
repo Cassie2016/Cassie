@@ -51,4 +51,4 @@ let obj = {
     consoleDebounce
 }
 
-obj.consoleDebounce(3,5) // 期待3秒后打印 1 3 5，但是3秒后打印 undefined 3 5
+obj.consoleDebounce(3,5) // 3秒后打印 1 3 5
