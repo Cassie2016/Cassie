@@ -66,7 +66,7 @@ console.log(this);  // refers to the global object (e.g., window in a browser)
 ```
 
 
-5. Arrow Functions:
+5.Arrow Functions:
 
 Arrow functions do not have their own this context. Instead, they inherit the this value from the enclosing scope.
 
