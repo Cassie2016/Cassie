@@ -82,3 +82,44 @@ Arrow functions do not have their own this context. Instead, they inherit the th
 
  obj.logName();  // 'Example' - 'this' inside the arrow function inherits from 'logName'
 ```
+
+
+实战题目：
+```
+this.a = 20;
+var test = {
+  a: 40,
+  init: () => {
+    console.log(this.a);
+    function go() {
+      this.a = 60;
+      console.log(this.a);
+    }
+    go.prototype.a = 50;
+    return go;
+  }
+};
+var p = test.init(); // 20
+p(); // 60
+// 输出什么为什么 说出this的变化指向
+// 如何让他输出 go.prototype.a
+```
+
+对于第二个问题，由于 原型链上的优先级要弱于构造函数，所以可以考虑使用构造函数，使 console.log(this.a); 打印出 50
+```
+this.a = 20;
+var test = {
+  a: 40,
+  init: () => {
+    console.log(this.a);
+    function go() {
+      this.a = 60;
+      console.log(this.a);
+    }
+    go.prototype.a = 50;
+    return go;
+  }
+};
+var p = test.init(); // 20
+nwe p(); // 50
+```
